@@ -5,13 +5,13 @@ import dagger.Module
 import dagger.Provides
 
 @Module
-abstract class UserNotificationServiceModule {
+class UserNotificationServiceModule {
 
-//    @Provides
-//    fun getMessageService() : NotificationService {
-//        return MessageService()
-//    }
+    @Provides
+    fun getMessageService() : NotificationService {
+        return MessageService()
+    }
 
-    @Binds
-    abstract fun getEmailService(emailService: EmailService) : NotificationService
+//    @Binds
+//    abstract fun getEmailService(emailService: EmailService) : NotificationService
 }
