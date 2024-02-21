@@ -2,8 +2,9 @@ package com.example.daggerexample
 
 import dagger.Component
 
-@Component
+@Component(modules = [UserRepositoryModule::class, UserNotificationServiceModule::class])
 interface UserRegistrationComponent {
 
-    fun getUserRegistrationService() : UserRegistrationService
+    fun inject(mainActivity: MainActivity)
+
 }
