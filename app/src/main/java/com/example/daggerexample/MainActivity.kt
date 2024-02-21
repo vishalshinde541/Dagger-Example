@@ -17,7 +17,9 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        val userRegistrationService = DaggerUserRegistrationComponent.builder().build().getUserRegistrationService()
+        val component = DaggerUserRegistrationComponent.builder().build()
+
+        val userRegistrationService = component.getUserRegistrationService()
         userRegistrationService.registerUser("vishal123@gmail.com", "12345678")
     }
 }
