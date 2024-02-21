@@ -25,7 +25,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val component = DaggerUserRegistrationComponent.builder().build()
+        val component = DaggerUserRegistrationComponent.builder()
+            .userNotificationServiceModule(UserNotificationServiceModule(3))
+            .build()
         component.inject(this)
         userRegistrationService.registerUser("vishal123@gmail.com", "12345678")
     }
