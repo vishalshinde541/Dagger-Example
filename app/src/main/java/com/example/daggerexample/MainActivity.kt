@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var emailService: EmailService
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
 
         val component = DaggerUserRegistrationComponent.builder().build()
         component.inject(this)
