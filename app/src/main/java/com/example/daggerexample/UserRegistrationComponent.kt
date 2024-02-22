@@ -5,7 +5,7 @@ import dagger.Component
 import javax.inject.Singleton
 
 @ApplicationScope
-@Component(modules = [UserRepositoryModule::class, UserNotificationServiceModule::class])
+@Component(modules = [UserRepositoryModule::class, UserNotificationServiceModule::class, AnalyticsServiceModule::class])
 interface UserRegistrationComponent {
 
     fun inject(mainActivity: MainActivity)
