@@ -4,11 +4,13 @@ import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Singleton
 
-@Singleton
+@ApplicationScope
 @Component(modules = [UserRepositoryModule::class, UserNotificationServiceModule::class])
 interface UserRegistrationComponent {
 
     fun inject(mainActivity: MainActivity)
+
+    fun getEmailService() : EmailService
 
     @Component.Factory
     interface Factory{
