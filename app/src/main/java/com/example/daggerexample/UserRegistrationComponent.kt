@@ -13,9 +13,9 @@ interface UserRegistrationComponent {
 
     fun getEmailService() : EmailService
 
-//    @Subcomponent.Factory
-//    interface Factory{
-//        fun create(@BindsInstance retryCount : Int) : UserRegistrationComponent
-//    }
+    @Subcomponent.Factory
+    interface Factory{
+        fun create(@BindsInstance retryCount : Int) : UserRegistrationComponent
+    }
 
 }
